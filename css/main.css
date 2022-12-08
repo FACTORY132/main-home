@@ -15,13 +15,13 @@ margin: 0;
 
 body {
 
-background: linear-gradient(320deg, rgb(57,55,55), rgb(0,0,0));
+
 display:block;
    
 }
 
 .topnav {
-
+background: black;
 border-top: 2px solid black;
 border-bottom: 2px solid red;
 left: 0;
@@ -77,38 +77,77 @@ background-color: white;
 
 
 .main {
+background: gray;
 left: 0;
 width: 100%;
-height: 90%;
+border: 10px solid black;
 display:block;
 margin-top: 50px;
 
 }
 
-.side {
+.slide {
 
-margin-left: -8px;
-width: auto;
+width: 70%;
+height: 40%;
+margin: auto;
+background-size: 100% 100%;
+-webkit-animation-name: sliding;
+-webkit-animation-duration: 4s;
+animation-name: sliding;
+animation-duration: 4s;
+animation-delay: 3s;
+animation-iteration-count: infinite;
+
+}
+
+@-webkit-keyframes sliding {
+
+from {background-image: url('first.jpg'); background-size: 100% 100%} 
+to {background-image: url('second.jpg'); background-size: 100% 100%}
+
+}
+
+
+@keyframes sliding {
+
+from {background-image: url('/img/first.jpg'); background-size: 100% 100%} 
+to {background-image: url('/img/second.jpg'); background-size: 100% 100%}
+
+}
+
+.blocks {
+
+width: 70%;
+height: 50%;
+background: gray;
+margin: auto;
+
+
+}
+
+.blocks2 {
+
+width: 70%;
 height: 100%;
-float: left;
-border: 2px solid black;
-text-align: center;
-}
-
-.side a{
-
-padding: 25px 10px;
-display:block;
-color: red;
-font-style: italic;
-font-size: 22px;
-text-decoration: none;
-border: 2px solid blue;
-background-color: black;
-}
-
-.side a:hover {
-
+margin: auto;
 background-color: white;
+display: block;
+}
+
+.content {
+
+width: 100%;
+height: 50%;
 
 }
+
+
+
+
+
+
+
+
+
+
