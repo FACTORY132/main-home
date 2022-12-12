@@ -1,88 +1,90 @@
 <html lang="en_us">
-  <head>
+
+<head>
     <title>Web Editor</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="UTF-8" />
-    <link href="css/main.css" rel="stylesheet" />
-  </head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="UTF-8">
+    <link href="css/main.css" rel="stylesheet">
+    <script src="script/Script.js"></script>
+</head>
 
-  <body>
-    <div class="topnav" style="background-image: url('./img/big.png'); background-size: 100% 100%">
-      <div class="login">
-        Username: <input type="text" /> Password:
-        <input type="password" /> Color: <input type="color" />
-      </div>
-
-      <div class="information">
-        <a href="/page/history.html" id="historical" title="ประวัติศาสตร์">ประวัติศาสตร์</a>
-        <a href="#">สถานที่</a>
-        <a href="#">ศิลาจารึก</a>
-        <a href="#" id="call">ติดต่อ</a>
-      </div>
-    </div>
-
-    <div class="main">
-      <div class="slide" style="background-image: url('./img/ancient.jpg')"></div>
-	<div class="menu-under-slide">
-	
-	<div class="info">
-
-		<a href="#">ข้อมูลเพิ่มเติม</a>
-	<a href="#">ประวัติศาสตร์ฝ่ายศัตรู</a>
-	<a href="#">ความสัมพันธ์</a>
-	</div>	
-		
-	</div>
-      <div class="blocks2">
-        <div
-          class="content"
-          style="background: linear-gradient(320deg, #eee, #000)"
-        >
-          <div>
-            <a href="#" class="pic-left">
-              <img
-                src="./img/chaiwatnaram.jpg"
-                width="80%"
-                height="90%"
-                style="margin-top: 10px; margin-left: 10%"
-              />
-            </a>
-          </div>
-          <div class="text-right">
-            <h1>วัดไชยวัฒนาราม</h1>
-          </div>
+<body>
+    <div class="topnav" style="
+      background-image: url('./img/big.png');
+      background-size: 100% 100%;
+      object-fit: cover;
+      ">
+        <div class="login">
+            Username: <input type="text" title="Enter name" placeholder="Enter your name">
+            Password: <input type="password" title="Enter Passwords" placeholder="Enter your passwords">
+            <input type="submit" placeholder="Submit">
         </div>
 
-        <div
-          class="content"
-          style="
-            margin-top: 0px;
-            background: linear-gradient(
-              320deg,
-              rgb(166,166,166),
-              #000
-            );
-          "
-        >
-          <div>
-            <a href="#" class="pic-right">
-              <img
-                src="./img/war.jpg"
-                width="80%"
-                height="90%"
-                style="margin-top: 10px; margin-left: 10%;   image-rendering: high-quality;"
-              />
-            </a>
-	
-	<div class="text-right">
-            <span> Hello </span>
-          </div>
-	
-</div>
-          </div>
-          
+        <div class="information">
+            <a id="historical" href="./page/history.html" title="ประวัติศาสตร์">ประวัติศาสตร์</a>
+            <a href="#">สถานที่</a>
+            <a href="#">ศิลาจารึก</a>
+            <a href="#">ติดต่อ</a>
         </div>
-      </div>
     </div>
-  </body>
+
+
+
+
+    <div class="main" id="main">
+        <div class="slide"></div>
+        <div class="menu-under-slide">
+            <div class="info">
+                <a href="#">ข้อมูลเพิ่มเติม</a>
+                <a href="#">ประวัติศาสตร์ฝ่ายศัตรู</a>
+                <a href="#">ความสัมพันธ์</a>
+            </div>
+
+           
+        </div>
+        <div class="blocks2">
+            <div class="content" style="background: linear-gradient(320deg, #eee,
+          #000)">
+                <a class="pic-left" href="javascript::void(0)">
+                    <img src="./img/chaiwatnaram.jpg">
+                </a>
+                <div class="text-right">
+                    <h1>วัดไชยวัฒนาราม</h1>
+                    <span>
+                    </span>
+                </div>
+            </div>
+
+            <div class="content" style="
+          margin-top: 0px;
+          background: linear-gradient(320deg, rgb(166, 166, 166), #000);
+          ">
+                <a class="pic-right" href="javascript::void(0)">
+                    <img src="./img/elephent-war.jpg">
+                </a>
+
+                <div class="text-left">
+                    <h1>ยุทธหัตถี</h1>
+                   
+                </div>
+            </div>
+            <div class="content" style="background: linear-gradient(320deg, rgb(14,
+          13, 13), rgb(107, 101, 101));">
+                <a class="pic-left" href="javascript::void(0)">
+                    <img src="./img/background-2.png">
+                </a>
+                <div class="text-right">
+                
+                    <h1>Sky</h1>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="contact"></div>
+    </div>
+</body>
+
 </html>

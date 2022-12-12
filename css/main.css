@@ -4,16 +4,20 @@ html {
 
 }
 
-*::before,
-*::after {
+* {
 
-    box-sizing: inherit;
     padding: 0;
     margin: 0;
 
 }
 
-body {}
+body {
+    overflow: auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
 
 .topnav {
     z-index: 999;
@@ -27,6 +31,8 @@ body {}
     height: 5%;
     position: fixed !important;
     display: block;
+    object-fit: cover;
+    overflow: auto;
 
 }
 
@@ -37,23 +43,22 @@ body {}
     width: 60%;
     height: 100%;
     float: left;
-    display: block;
     color: white;
     margin: auto;
-	
+
 }
 
 .login [type=text],
 [type="password"] {
 
-    border: 2px solid red;
+    border: 2px solid black;
 
 }
 
 .information {
 
-    width: auto;
-    height:100%;
+    width: -40%;
+    height: 100%;
     float: right;
     margin: auto;
 
@@ -61,7 +66,7 @@ body {}
 
 .information a {
 
-    font-size: 1vw;
+    font-size: 1.275vw;
     font-style: italic;
     padding: 18px 25px;
     text-decoration: none;
@@ -69,46 +74,57 @@ body {}
     margin: auto;
     text-align: center;
     color: white;
-	
 
 }
 
 .information a:hover {
 
     background-color: white;
-	color: red
+    color: black
 }
 
 .info {
 
-width: 50%;
-height: 80%;
-float: right;
-margin: auto;
-display: block;
-margin-top: 4px;	
-overflow: auto;
+    width: auto;
+    height: 80%;
+    float: right;
+    margin: auto;
+    display: block;
+    margin-top: 4px;
 }
 
 .info a {
 
-font-size: x-large;
-color: white;
-padding: 7px 24px;
-text-decoration: none;
+    font-size: 2.5vh;
+    color: white;
+    padding: 7px 24px;
+    text-decoration: none;
 }
 
 .info a:hover {
 
-color: red;
-background-color: white
+    color: red;
+    background-color: white;
+    transition: 2s;
+    -webkit-transition: 2s;
+}
+
+.info a:not(:hover) {
+    transition: 2s;
+    -webkit-transition: 2s;
+
 }
 
 
+
+
 .main {
-    background: gray;
     width: 100%;
     height: inherit;
+    background-image: url('../img/background.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    object-fit: cover;
     display: block;
     margin-top: 50px;
     margin: 0 auto;
@@ -116,72 +132,108 @@ background-color: white
 }
 
 .slide {
-
+    background-image: url('../img/ancient.jpg');
     width: 80%;
     height: 60%;
     margin: auto;
     background-size: 100% 100%;
-    border: 3px solid red;
-    border-radius: 1px;
-    /*-webkit-animation-name: sliding;
-    -webkit-animation-duration: 4s;
+    border: 3px solid black;
+    object-fit: cover;
+    -webkit-animation-name: sliding;
+    -webkit-animation-duration: 6s;
+    -webkit-animation-delay: 5s;
     animation-name: sliding;
-    animation-duration: 4s;
-    animation-delay: 3s;
+    animation-duration: 6s;
+    animation-delay: 5s;
     animation-iteration-count: infinite;
-    animation-direction: alternate;*/
 
 
 }
 
 .menu-under-slide {
 
-width: 80%;
-height: 4%;
-margin: auto;
-background-color: black;
-border: 2px solid yellow;
+    width: 80%;
+    height: 4%;
+    margin: auto;
+    background-color: black;
+    border: 2px solid black;
+    overflow: auto;
 }
+
+
 
 @-webkit-keyframes sliding {
 
     from {
-        background-image: url('./img/first.png');
+        background-image: url('../img/ancient.jpg');
         background-size: 100% 100%;
     }
 
     to {
-        background-image: url('./img/second.png');
+        background-image: url('../img/second.png');
         background-size: 100% 100%;
+
     }
+
+    ;
+
+
 
 }
 
 
 @keyframes sliding {
-
     from {
-        background-image: url('./img/first.png');
+        background-image: url('../img/ancient.jpg');
         background-size: 100% 100%;
     }
 
     to {
-        background-image: url('./img/second.png');
+        background-image: url('../img/background.png');
         background-size: 100% 100%;
     }
 
 
 }
+
+.ld {
+
+    float: left;
+    width: 50%;
+    height: 100%;
+    color: white;
+    display: block;
+}
+
+
 
 
 
 .blocks2 {
 
     width: 80%;
-    height: 100%;
-    margin: auto;
+    height: auto;
     background-color: white;
+    margin: auto;
     display: block;
+    border: 2px solid black;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.footer {
+    width: 100%;
+    height: 40%;
+    overflow: auto;
+    background-color: rgb(9, 12, 49)
+}
+
+.contact {
+    width: 50%;
+    height: 80%;
+    margin-top: 35px;
+    float: right;
 }
 
 .content {
@@ -189,6 +241,7 @@ border: 2px solid yellow;
     width: 100%;
     height: 30%;
     margin: auto;
+    overflow: auto;
     display: block;
 
 
@@ -200,7 +253,36 @@ border: 2px solid yellow;
     height: 100%;
     float: left;
     background-size: 100% 100%;
-    border-right: 6px dotted black;
+    border-right: 6px dotted red;
+    object-fit: cover;
+}
+
+.pic-left img {
+
+    margin-top: 12px;
+    margin-left: 5%;
+    box-shadow: 2px 2px 2px black;
+    border-radius: 10px;
+    width: 90%;
+    height: 13vmax;
+
+}
+
+.pic-left img:hover {
+    -webkit-transition: 1.5s;
+    transition: 1.5s;
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+    transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+
+}
+
+
+.pic-left img:not(:hover) {
+    -webkit-transition: 1.5s;
+    transition: 1.5s;
+    transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+
 }
 
 .pic-right {
@@ -208,9 +290,36 @@ border: 2px solid yellow;
     width: 30%;
     height: 100%;
     background-size: 100% 100%;
-    border-left: 6px dotted black;
+    border-left: 6px dotted red;
     display: block;
+    object-fit: cover;
 
+}
+
+.pic-right img {
+    margin-top: 12px;
+    margin-left: 5%;
+    box-shadow: 2px 2px 2px 2px black;
+    border-radius: 10px;
+    width: 90%;
+    height: 13.5vmax;
+}
+
+.pic-right img:hover {
+    -webkit-transition: 1.5s;
+    transition: 1.5s;
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+    transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+
+}
+
+.pic-right img:not(:hover) {
+    -webkit-transition: 1.5s;
+    transition: 1.5s;
+    -webkit-transform: scale(1.0);
+    transform: scale(1.0);
+    transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 .text-left {
@@ -218,37 +327,54 @@ border: 2px solid yellow;
     width: 65%;
     height: 100%;
     margin: auto;
+    text-align: center;
+    text-shadow: 4px 4px 4px black;
+    overflow: auto;
     display: block;
 }
 
 .text-left h1 {
-    text-decoration: solid;
-    font-size: xx-large;
-    color: red;
-    border-bottom: 2px solid black;
+    width: auto;
+    font-size: 2.25vw;
+    color: black;
+    text-align: center;
+    margin: auto;
+    text-shadow: 1px 2px gray;
+
 }
 
+.text-left span {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.25vw;
+    color: white;
+}
 
 .text-right {
     float: right;
     width: 65%;
     height: 100%;
     margin: auto;
+    text-align: center;
+    text-shadow: 4px 4px 4px black;
+    overflow: auto;
+    display: block;
 
 }
 
 
 .text-right h1 {
     width: auto;
-    font-size: xx-large;
+    font-size: 2.25vw;
     text-align: center;
     margin: auto;
     color: black;
+    text-shadow: 1px 2px lightgray;
 
 
 }
 
 .text-right span {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: large;
+    font-size: 1.25vw;
+    color: white;
 }
