@@ -33,7 +33,8 @@ body {
     display: block;
     object-fit: cover;
     overflow: auto;
-
+    overflow-y: hidden;
+    overflow-x: hidden;
 }
 
 
@@ -86,8 +87,8 @@ body {
 .info {
 
     width: auto;
-    height: 80%;
-    float: right;
+    height: 100%;
+    float: left;
     margin: auto;
     display: block;
     margin-top: 4px;
@@ -115,7 +116,14 @@ body {
 
 }
 
+.search {
 
+width: auto;
+height: 100%;
+float: right;
+margin-top: 10px;
+
+}
 
 
 .main {
@@ -129,6 +137,7 @@ body {
     margin-top: 50px;
     margin: 0 auto;
     overflow: auto;
+
 }
 
 .slide {
@@ -138,16 +147,13 @@ body {
     margin: auto;
     background-size: 100% 100%;
     border: 3px solid black;
-    object-fit: cover;
     -webkit-animation-name: sliding;
-    -webkit-animation-duration: 6s;
-    -webkit-animation-delay: 5s;
+    -webkit-animation-duration: 5s;
     animation-name: sliding;
-    animation-duration: 6s;
-    animation-delay: 5s;
+    animation-duration: 5s;
+    animation-delay: 3s;
     animation-iteration-count: infinite;
-
-
+    animation-direction: alternate;
 }
 
 .menu-under-slide {
@@ -158,6 +164,7 @@ body {
     background-color: black;
     border: 2px solid black;
     overflow: auto;
+    overflow-y: scroll;
 }
 
 
@@ -166,17 +173,13 @@ body {
 
     from {
         background-image: url('../img/ancient.jpg');
-        background-size: 100% 100%;
+    
     }
 
     to {
-        background-image: url('../img/second.png');
-        background-size: 100% 100%;
-
+        background-image: url('../img/background.png');
+      
     }
-
-    ;
-
 
 
 }
@@ -185,12 +188,12 @@ body {
 @keyframes sliding {
     from {
         background-image: url('../img/ancient.jpg');
-        background-size: 100% 100%;
+       
     }
 
     to {
         background-image: url('../img/background.png');
-        background-size: 100% 100%;
+        
     }
 
 
@@ -226,7 +229,17 @@ body {
     width: 100%;
     height: 40%;
     overflow: auto;
-    background-color: rgb(9, 12, 49)
+    background-color: rgb(9, 12, 49);
+    overflow: auto;
+    overflow-y: hidden;
+    
+}
+
+.footer h1 {
+
+text-align: center;
+font-size: 3vw;
+color: red;
 }
 
 .contact {
@@ -242,6 +255,8 @@ body {
     height: 30%;
     margin: auto;
     overflow: auto;
+    overflow-y: hidden;
+overflow-x: hidden;
     display: block;
 
 
@@ -253,7 +268,7 @@ body {
     height: 100%;
     float: left;
     background-size: 100% 100%;
-    border-right: 6px dotted red;
+    border-right: 6px dotted yellow;
     object-fit: cover;
 }
 
@@ -344,18 +359,19 @@ body {
 }
 
 .text-left span {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Kanit-Light';
     font-size: 1.25vw;
     color: white;
 }
 
 .text-right {
-    float: right;
+    float: left;
+
     width: 65%;
     height: 100%;
     margin: auto;
-    text-align: center;
     text-shadow: 4px 4px 4px black;
+margin-left: 10px;
     overflow: auto;
     display: block;
 
@@ -374,7 +390,7 @@ body {
 }
 
 .text-right span {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Kanit Light';
     font-size: 1.25vw;
     color: white;
 }
